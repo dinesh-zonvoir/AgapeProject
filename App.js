@@ -8,6 +8,7 @@ import ForgotPassConfirm from './src/screens/ForgotPassConfirm';
 import FirstPage from './src/screens/FirstPage';
 import OnBoarding from './src/screens/OnBoarding';
 import MainContainer from './src/navigation/MainContainer';
+import YourDrawerScreen from './src/navigation/YourDrawerScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +23,7 @@ const Stack = createNativeStackNavigator();
           <Stack.Screen name="SignUpScreen" component={SignUpScreen} options={{ headerShown: false}} />
           <Stack.Screen name="ForgotPassConfirm" component={ForgotPassConfirm} options={{ headerShown: false}} />
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} options={{ headerShown: false}} />
+          <Stack.Screen name="Drawer" component={YourDrawerScreen} options={{ headerShown: false}} />
           <Stack.Screen name="MainContainer" component={MainContainer} options={{ headerShown: false}} />
           </Stack.Navigator>
       </NavigationContainer>

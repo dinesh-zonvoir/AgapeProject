@@ -7,6 +7,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './screen/HomeScreen';
 import DetailsScreen from './screen/DetailsScreen';
 import ProfileScreen from './screen/ProfileScreen';
+import ActOfKindNessScreen from './screen/ActOfKindNessScreen';
+import NomineteGiverScreen from './screen/NomineteGiverScreen';
 const Tab=createBottomTabNavigator()
 const MainContainer = () => {
   return ( 
@@ -36,14 +38,14 @@ const MainContainer = () => {
   >
       
 <Tab.Screen name='Home' component={HomeScreen} options={{headerShown:false}}/>
-<Tab.Screen name='Profile' component={ProfileScreen}/>
+<Tab.Screen name='ActivityKindness' component={ActOfKindNessScreen}/>
+<Tab.Screen name='NominiGiver' component={NomineteGiverScreen}/>
 <Tab.Screen name='Details' component={DetailsScreen}/>
+<Tab.Screen name='Profile' component={ProfileScreen}/>
+
 
         </Tab.Navigator>
-      //  {/* <Stack.Navigator initialRouteName="Home">
-      //   <Stack.Screen name="Home" component={HomeScreen} />
-      //   <Stack.Screen name="Details" component={DetailsScreen} />
-      // </Stack.Navigator> */}
+    
     
   );
 };

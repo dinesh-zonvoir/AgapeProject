@@ -18,8 +18,9 @@ import { MyColor } from '../assets/colors';
 const LoginScreen = ({ navigation }) => {
  
   const onPressLogin = () => {
-    navigation.navigate("MainContainer")
-    // navigation.navigate("SignUpScreen")
+    navigation.navigate("Drawer")
+    // navigation.navigate("MainContainer")
+    
   };
   const onPressForgotPassword = () => {
     navigation.navigate("ForgotPassword")
