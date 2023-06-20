@@ -17,13 +17,14 @@ const Stack = createNativeStackNavigator();
     return (
       <NavigationContainer>
           <Stack.Navigator>
+          <Stack.Screen name="Drawer" component={YourDrawerScreen} options={{ headerShown: false}} />
           <Stack.Screen name="OnBoarding" component={OnBoarding} options={{ headerShown: false}} />
           <Stack.Screen name="FirstPage" component={FirstPage} options={{ headerShown: false}} />
           <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false}} />
           <Stack.Screen name="SignUpScreen" component={SignUpScreen} options={{ headerShown: false}} />
           <Stack.Screen name="ForgotPassConfirm" component={ForgotPassConfirm} options={{ headerShown: false}} />
           <Stack.Screen name="ForgotPassword" component={ForgotPassword} options={{ headerShown: false}} />
-          <Stack.Screen name="Drawer" component={YourDrawerScreen} options={{ headerShown: false}} />
+        
           <Stack.Screen name="MainContainer" component={MainContainer} options={{ headerShown: false}} />
           </Stack.Navigator>
       </NavigationContainer>

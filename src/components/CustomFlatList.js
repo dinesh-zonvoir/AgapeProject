@@ -2,7 +2,7 @@ import React from 'react';
 import { View, FlatList, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const CustomFlatList = ({ data, onItemClick }) => {
-  const renderItem = ({ item }) => {
+  const renderItem = ({ item }) =>{
     return (
       <TouchableOpacity style={styles.itemContainer} onPress={() => onItemClick(item)}>
         <Image source={item.image} style={styles.itemImage} />
@@ -17,7 +17,8 @@ const CustomFlatList = ({ data, onItemClick }) => {
         horizontal
         data={data}
         renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(item) => item.id.toString()} 
+        showsHorizontalScrollIndicator={false} 
       />
     </View>
   );
@@ -25,19 +26,19 @@ const CustomFlatList = ({ data, onItemClick }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 10,
+    marginVertical: 0,
   },
   itemContainer: {
     alignItems: 'center',
-    marginRight: 10,
+    marginRight: 4,
   },
   itemImage: {
-    width: 80,
-    height: 80,
+    width: 100,
+    height: 100,
     borderRadius: 40,
   },
   itemLabel: {
-    marginTop: 5,
+    marginTop: 0,
     fontSize: 16,
     fontWeight: 'bold',
   },

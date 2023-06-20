@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FAB } from 'react-native-elements';
 import {
   SafeAreaView,
   ScrollView,
