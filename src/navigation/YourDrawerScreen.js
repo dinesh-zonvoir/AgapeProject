@@ -207,7 +207,7 @@ const YourDrawerScreen = () => {
                         <Image source={require('../assets/images/Group.png')}
                         />
                     </TouchableOpacity>
-                    <Text style={{ marginLeft: 20, fontSize: 20, fontWeight: '800', flex: 1 }}>{menus[selectedMenuItem].title == 'Home' ? '' : ''}</Text>
+                    <Text style={{ marginLeft: 20, fontSize: 20, fontWeight: '800', flex: 1 }}>{menus[selectedMenuItem].title === 'Home' ? '' : menus[selectedMenuItem].title}</Text>
                     <TouchableOpacity style={{ marginLeft: 20 }}>
                         <Image source={require('../assets/images/Notification.png')} style={styles.myIcons}
                         />

@@ -1,12 +1,11 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 import { MyColor } from '../assets/colors';
-const CustomCardLong = ({ title,subTitle, bgColor, imageSource }) => {
+const CustomCardLong = ({ title,subTitle, bgColor, imageSource,address,distance }) => {
     
   return (
     <View style={{
         width: 300,
-        height: 150,
         marginRight:8,
         backgroundColor:bgColor,
         borderRadius: 16,
@@ -15,15 +14,13 @@ const CustomCardLong = ({ title,subTitle, bgColor, imageSource }) => {
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.subTitle}>{subTitle}</Text>
       <View style={styles.card}>
-        <View>
-
-        </View>
+    
         <View style={styles.subCard}>
-
+        <Text style={styles.textStyle}>{address}</Text>
         </View>
 
         <View style={styles.subCard}>
-
+        <Text style={styles.textStyle}>{distance}</Text>
         </View>
 
       </View>
@@ -61,12 +58,24 @@ const styles = StyleSheet.create({
     flexDirection:'row'
   },
   subCard:{
-    marginRight:10,
+    padding:8,
+    marginRight:8,
+    marginLeft:8,
+    marginBottom:8,
     flex:1,
-    width:100,
-    height:48,
     borderRadius:20,
-    backgroundColor:MyColor.grey_light
+    backgroundColor:MyColor.grey_light,
+    justifyContent:'center',
+    left:0,
+    right:0,
+    top:0,
+    bottom:0
+  },
+  textStyle:{
+    color:MyColor.white,
+    textAlign:'center',
+    fontSize:10,
+    width:'100%'
   }
 });
 

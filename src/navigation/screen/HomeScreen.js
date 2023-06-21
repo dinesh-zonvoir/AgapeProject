@@ -51,17 +51,17 @@ const HomeScreen = ({ navigation }) => {
   ];
 
   const data_given_opportunities= [
-    { id: 1, image: require('../../assets/images/whtopd.png'), title: 'Dinesh kumar', subTitle: 'Android developer' ,color:MyColor.black_light},
-    { id: 2, image: require('../../assets/images/whtopd.png'), title: 'Dinesh kumar', subTitle: 'Android developer' ,color:MyColor.black_light},
-    { id: 3, image: require('../../assets/images/whtopd.png'), title: 'Dinesh kumar', subTitle: 'Android developer' ,color:MyColor.black_light},
-    { id: 4, image: require('../../assets/images/whtopd.png'), title: 'Dinesh kumar', subTitle: 'Android developer',color:MyColor.black_light },
-    { id: 5, image: require('../../assets/images/whtopd.png'), title: 'Dinesh kumar', subTitle: 'Android developer' ,color:MyColor.black_light},
+    { id: 1, image: require('../../assets/images/whtopd.png'), title: 'Feed Seniors', subTitle: 'With Doorways for woman and families' ,address:'Rohade Island , 02880',color:MyColor.black_light,distance:'4.7 miles'},
+    { id: 2, image: require('../../assets/images/whtopd.png'), title: 'Feed Seniors', subTitle: 'With Doorways for woman and families' ,address:'Rohade Island , 02880',color:MyColor.black_light,distance:'4.7 miles'},
+    { id: 3, image: require('../../assets/images/whtopd.png'), title: 'Feed Seniors', subTitle: 'With Doorways for woman and families' ,address:'Rohade Island , 02880',color:MyColor.black_light,distance:'4.7 miles'},
+    { id: 4, image: require('../../assets/images/whtopd.png'), title: 'Feed Seniors', subTitle: 'With Doorways for woman and families' ,address:'Rohade Island , 02880',color:MyColor.black_light,distance:'4.7 miles'},
+    { id: 5, image: require('../../assets/images/whtopd.png'), title: 'Feed Seniors', subTitle: 'With Doorways for woman and families' ,address:'Rohade Island , 02880',color:MyColor.black_light,distance:'4.7 miles'},
     // Add more items as needed
   ];
 
   const handleItemClick = (item) => {
     // Handle item click here
-    navigation.navigate('Details');
+    // navigation.navigate('Details');
     console.log('Item clicked:', item);
   };
   const handleItemClickData1 = (item) => {
@@ -165,7 +165,7 @@ const HomeScreen = ({ navigation }) => {
 
                   }}
                 >
-                  <CustomCardLong title={item.title} subTitle={item.subTitle} bgColor={item.color}imageSource={item.image} />
+                  <CustomCardLong title={item.title} subTitle={item.subTitle} bgColor={item.color} imageSource={item.image} address={item.address} distance={item.distance}/>
                 </TouchableOpacity>
               );
             }} />
