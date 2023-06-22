@@ -5,10 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import DetailsScreen from './src/screen/DetailsScreen';
 import HomeScreen from './screen/HomeScreen';
-import DetailsScreen from './screen/OpportunitiesScreen';
 import ProfileScreen from './screen/ProfileScreen';
 import ActOfKindNessScreen from './screen/ActsScreen';
-import NomineteGiverScreen from './screen/NomineteScreen';
 const Tab=createBottomTabNavigator()
 const MainContainer = () => {
   return ( 
@@ -17,7 +15,6 @@ const MainContainer = () => {
 <Tab.Screen name='Home' component={HomeScreen} options={{headerShown:false}}/>
 <Tab.Screen name='ActivityKindness' component={ActOfKindNessScreen}/>
 <Tab.Screen name='NominiGiver' component={NomineteGiverScreen}/>
-<Tab.Screen name='Details' component={DetailsScreen}/>
 <Tab.Screen name='Profile' component={ProfileScreen}/>
         </Tab.Navigator>
     

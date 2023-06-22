@@ -11,7 +11,6 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import Icon from 'react-native-ionicons';
 import { MyColor } from '../assets/colors';
 
 

@@ -4,9 +4,12 @@ import { transformer } from '../../metro.config';
 
 import HomeScreen from './screen/HomeScreen';
 import ActsScreen from './screen/ActsScreen';
-import NomineteScreen from './screen/NomineteScreen';
-import OpportunitiesScreen from './screen/OpportunitiesScreen';
 import ProfileScreen from './screen/ProfileScreen';
+import NominateaGiver from '../screens/NominateaGiver';
+import Friends from '../screens/Friends';
+import Message from '../screens/Message';
+import Notifications from '../screens/Notification';
+import Oppertunities from '../screens/Opportunities';
 const menus = [
     { icon: require('../assets/images/home1.png'), title: 'Home' },
     { icon: require('../assets/images/profile1.png'), title: 'Profile' },
@@ -31,12 +34,28 @@ const YourDrawerScreen = () => {
     } else if (selectTabItem === 1) {
       screenComponent = <ActsScreen />;
     } else if (selectTabItem === 2) {
-      screenComponent = <NomineteScreen />;
+      screenComponent = <NominateaGiver/>;
     } else if (selectTabItem === 3) {
-      screenComponent = <OpportunitiesScreen />;
+      screenComponent = <Oppertunities/>;
     } else if (selectTabItem === 4) {
       screenComponent = <ProfileScreen />;
-    } else {
+    } 
+    else if(selectTabItem==5){
+     screenComponent=<Friends/>
+    }
+    else if(selectTabItem==6){
+        screenComponent=<HomeScreen/>
+    }
+
+    else if(selectTabItem==7){
+        screenComponent=<Message/>
+    }
+    else if(selectTabItem==8){
+        screenComponent=<Notifications/>
+    }
+    
+    
+    else {
       screenComponent = <HomeScreen />;
     }
 
@@ -127,7 +146,7 @@ const YourDrawerScreen = () => {
                                         setSelctedTabItem(7)
                                     }
                                     else if(item.title=='Notifications'){
-                                        setSelctedTabItem(7)
+                                        setSelctedTabItem(8)
                                     }
                                     else{
                                         setSelctedTabItem(0)
